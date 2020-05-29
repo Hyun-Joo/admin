@@ -6,12 +6,12 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
-import com.jjud.admin.VO.UserVO;
+import com.jjud.admin.VO.User;
 
 @Repository
 @Mapper
 public interface TestMapper {
 
-	List<UserVO> test(Map<String, Object> map);
+	List<User> test(Map<String, Object> map);
 
 }
