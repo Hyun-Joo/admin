@@ -1,6 +1,7 @@
 package com.jjud.admin.service.Impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,8 +17,8 @@ public class TestServiceImpl implements TestService {
 	TestMapper mapper;
 
 	@Override
-	public List<UserVO> test() {
-		return mapper.test();
+	public List<UserVO> test(Map<String,Object> map) {
+		return mapper.test(map);
 	}
 	
 	
