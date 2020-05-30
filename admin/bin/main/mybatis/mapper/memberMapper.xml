@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jjud.admin.mapper.MemberMapper">
+	<select id="memberList" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+		SELECT U.id
+		  	  ,U.account
+		      ,U.password
+		      ,U.status
+		      ,U.email
+		      ,U.phone_number
+		      ,U.registered_at
+			  ,U.unregistered_at
+			  ,U.created_at
+			  ,U.created_by
+			  ,U.updated_at
+			  ,U.updated_by
+		FROM user U
+		ORDER BY ID DESC
+	</select>
+</mapper>
