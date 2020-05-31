@@ -18,4 +18,10 @@
 		FROM user U
 		ORDER BY ID DESC
 	</select>
+	<select id="login" resultType="int">
+		
+		SELECT COUNT(*) FROM user
+		WHERE ACCOUNT=#{ACCOUNT} AND PASSWORD=#{PASSWORD}
+
+	</select>
 </mapper>

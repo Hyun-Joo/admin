@@ -12,4 +12,6 @@ public interface MemberMapper {
 
 	List<Map<String, Object>> memberList(Map<String, Object> map);
 
+	Integer login(Map<String, Object> map);
+
 }
