@@ -15,7 +15,6 @@ import com.jjud.admin.service.MemberService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 
-@CrossOrigin
 @Slf4j
 @RestController
 @RequestMapping("/member")
@@ -26,12 +25,14 @@ public class MemberController extends AbstractController {
 	@Autowired
 	MemberService memberService;
 	
+	@CrossOrigin
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	@ResponseBody
 	public Map<String, Object> selectList(Map<String, Object> map) {
 		return makeQueryResultMap(memberService.memberList(map));
 	}
 	
+	@CrossOrigin
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@ResponseBody
 	public Map<String, Object> selectOne(@RequestBody Map<String, Object> map) {
