@@ -18,5 +18,9 @@ public class MemberServiceImpl implements MemberService{
 	public List<Map<String, Object>> memberList(Map<String, Object> map) {
 		return mapper.memberList(map);
 	}
+	@Override
+	public Integer login(Map<String, Object> map) {
+		return mapper.login(map);
+	}
 
 }

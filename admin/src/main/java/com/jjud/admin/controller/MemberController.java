@@ -1,8 +1,10 @@
 package com.jjud.admin.controller;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -27,5 +29,12 @@ public class MemberController extends AbstractController {
 	@ResponseBody
 	public Map<String, Object> selectList(Map<String, Object> map) {
 		return makeQueryResultMap(memberService.memberList(map));
+	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@ResponseBody
+	public Map<String, Object> selectOne(@RequestBody Map<String, Object> map) {
+		log.info("fuckyou=========>"+map.toString());
+		return makeQueryResultMap(memberService.login(map));
 	}
 }

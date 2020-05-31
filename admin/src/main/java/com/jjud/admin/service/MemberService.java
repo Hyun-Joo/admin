@@ -7,4 +7,6 @@ public interface MemberService {
 
 	public abstract List<Map<String, Object>> memberList(Map<String, Object> map);
 
+	public abstract Integer login(Map<String, Object> map);
+
 }
