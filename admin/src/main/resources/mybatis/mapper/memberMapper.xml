@@ -21,6 +21,27 @@
 	<select id="login" resultType="int">		
 		SELECT COUNT(*) FROM user
 		WHERE ACCOUNT=#{account} AND PASSWORD=#{password}
-
 	</select>
+	<insert id="signup">
+		INSERT INTO user (
+				 account
+				,password
+				,status
+				,email
+				,phone_number
+				,registered_at
+				,created_at
+				,created_by
+				)
+		VALUES (
+				 #{account}
+				,#{password}
+				,#{status}
+				,#{email}
+				,#{phoneNumber}
+				,now()
+				,now()
+				,#{createdBy}
+			  )
+	</insert>
 </mapper>
